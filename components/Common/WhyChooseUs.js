@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
                 <div className="choose-image">
                   <Link href="/services/service-details">
                     <a>
-                      <img src="/images/choose/choose-1.jpg" alt="image" />
+                      <img src="/images/choose/choose-2.jpg" alt="image" />
                     </a>
                   </Link>
                 </div>

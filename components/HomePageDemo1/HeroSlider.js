@@ -166,7 +166,7 @@ const HeroSlider = () => {
                         data-aos-duration="700"
                         data-aos-once="true"
                       >
-                        <Link href="/contact">
+                        <Link href="/services/services-2">
                           <a className="default-btn">
                           Explore Our Services 
                           </a>
