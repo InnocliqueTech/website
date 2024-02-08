@@ -7,7 +7,7 @@ const ServiceSlider = () => {
   return (
     <>
       <div className="services-area with-radius ptb-100">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-12">
               <div
@@ -17,19 +17,19 @@ const ServiceSlider = () => {
                 data-aos-duration="800"
                 data-aos-once="true"
               >
-                <span style={{ color: '#ffffff' }}>SERVICES</span>
+                <span style={{ color: '#ffffff' }}>SOLUTIONS</span>
                 <h3>
-                  <strong  style={{ fontWeight: '400' }}>Tailored Solutions to </strong> Propel Your Business
+                  <strong  style={{ fontWeight: '400' }}>Transformative Solutions for </strong> Unparalleled Growth 
                 </h3>
                 <p>
-                At Innoclique, we offer a comprehensive suite of services 
-                designed to address the multifaceted needs of modern businesses. 
-                From innovative technology solutions to strategic staffing, each service we 
-                provide is aimed at enhancing your operations and driving your business forward.
+                Innoclique's suite of solutions is strategically designed to empower your business 
+                with the tools needed for sustainable growth and efficiency. Our approach focuses on 
+                understanding your unique challenges and opportunities, delivering solutions that 
+                transcend traditional service offerings.
                 </p>
                 <div className="services-section-btn">
-                  <Link href="/services/services-2">
-                    <a className="default-btn">Explore All Services</a>
+                  <Link href="/solutions">
+                    <a className="default-btn">Explore All Solutions</a>
                   </Link>
                 </div>
               </div>
@@ -38,7 +38,7 @@ const ServiceSlider = () => {
             <div className="col-lg-8 col-md-12">
               <Swiper
                 slidesPerView={1}
-                spaceBetween={100}
+                spaceBetween={0}
                 pagination={{
                   clickable: true,
                 }}
@@ -54,7 +54,7 @@ const ServiceSlider = () => {
                     slidesPerView: 2,
                   },
                   1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                   },
                 }}
                 modules={[Autoplay, Pagination]}
@@ -63,10 +63,10 @@ const ServiceSlider = () => {
                 <SwiperSlide>
                   <div className="services-item">
                     <div className="services-image">
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/techinnodevdetails">
                         <a>
                           <img
-                            src="/images/services/services-1.jpg"
+                            src="/images/solutions/solutions-1.jpg"
                             alt="image"
                           />
                         </a>
@@ -74,16 +74,16 @@ const ServiceSlider = () => {
                     </div>
                     <div className="services-content">
                       <h3>
-                        <Link href="/services/service-details">
+                        <Link href="/solutions/techinnodevdetails">
                           <a> Technology Innovation & Development</a>
                         </Link>
                       </h3>
                       <p>
-                        <i>Pioneering with Precision</i>- Explore the frontier of
-                        technology with our AI, automation, and custom software
-                        solutions.
+                        <i>Empowering Progress with Cutting-Edge Solutions</i>- Our service goes beyond mere development; it's 
+                        about pioneering solutions that transform business challenges into opportunities for growth and 
+                        innovation.
                       </p>
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/techinnodevdetails">
                         <a className="services-btn">Innovate Today</a>
                       </Link>
                     </div>
@@ -93,10 +93,10 @@ const ServiceSlider = () => {
                 <SwiperSlide>
                   <div className="services-item">
                     <div className="services-image">
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/strategicitconsdetails/">
                         <a>
                           <img
-                            src="/images/services/services-2.jpg"
+                            src="/images/solutions/solutions-2.jpg"
                             alt="image"
                           />
                         </a>
@@ -104,56 +104,28 @@ const ServiceSlider = () => {
                     </div>
                     <div className="services-content">
                       <h3>
-                        <Link href="/services/service-details">
+                        <Link href="/solutions/strategicitconsdetails/">
                           <a>Strategic IT Consulting & Solutions</a>
                         </Link>
                       </h3>
                       <p>
-                        <i>Navigating Complexity, Delivering Clarity</i>- Our
-                        strategic consulting and comprehensive solutions
-                        demystify the complexities of IT.
+                        <i>Crafting Your Roadmap to Technological Excellence</i>- We provide clarity and strategic direction 
+                        in the complex IT landscape, aligning technology with your business goals for optimized 
+                        performance and investment.
                       </p>
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/strategicitconsdetails/">
                         <a className="services-btn">Strategize Now</a>
                       </Link>
                     </div>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="services-item">
-                    <div className="services-image">
-                      <Link href="/services/service-details">
-                        <a>
-                          <img
-                            src="/images/services/services-3.jpg"
-                            alt="image"
-                          />
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="services-content">
-                      <h3>
-                        <Link href="/services/service-details">
-                          <a>Comprehensive Staffing & Talent Management</a>
-                        </Link>
-                      </h3>
-                      <p>
-                        <i>Empower Your Team, Elevate Your Potential</i>- Bridge the
-                        talent gap with our strategic staffing and team
-                        extension services.
-                      </p>
-                      <Link href="/services/service-details">
-                        <a className="services-btn">Enhance Your Team</a>
-                      </Link>
-                    </div>
-                  </div>
-                </SwiperSlide>
+               
 
                 <SwiperSlide>
                   <div className="services-item">
                     <div className="services-image">
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/costeffectivedetails/">
                         <a>
                           <img
                             src="/images/services/services-4.jpg"
@@ -164,15 +136,44 @@ const ServiceSlider = () => {
                     </div>
                     <div className="services-content">
                       <h3>
-                        <Link href="/services/service-details">
+                        <Link href="/solutions/costeffectivedetails/">
                           <a>Cost-Effective Managed Services</a>
                         </Link>
                       </h3>
                       <p>
-                        <i>Efficiency Enhanced, Costs Contained</i>- Embrace
-                        operational excellence with our managed services.
+                        <i>Optimizing Operations While Reducing Costs</i>- Our managed services offer a balance of operational excellence and cost efficiency, 
+                        rivaling top-tier providers at a significantly reduced cost.
                       </p>
-                      <Link href="/services/service-details">
+                      <Link href="/solutions/costeffectivedetails/">
+                        <a className="services-btn">Optimize Now</a>
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="services-item">
+                    <div className="services-image">
+                      <Link href="/solutions/engagementmodeldetails">
+                        <a>
+                          <img
+                            src="/images/services/services-4.jpg"
+                            alt="image"
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="services-content">
+                      <h3>
+                        <Link href="/solutions/engagementmodeldetails">
+                          <a>Engagement Models Designed for Your Success</a>
+                        </Link>
+                      </h3>
+                      <p>
+                        Our flexible engagement models are tailored to meet the unique needs and preferences of your projects, ensuring a partnership that aligns with your business objectives.
+                        
+                      </p>
+                      <Link href="/solutions/engagementmodeldetails">
                         <a className="services-btn">Optimize Now</a>
                       </Link>
                     </div>

@@ -100,37 +100,6 @@ const Navbar = () => {
                         About Us
                       </a>
                       </Link>
-                      {/* <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="/about" activeClassName="active">
-                            <a className="nav-link">About Style - 1</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/about-2" activeClassName="active">
-                            <a className="nav-link">About Style - 2</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/about-3" activeClassName="active">
-                            <a className="nav-link">About Style - 3</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/gallery" activeClassName="active">
-                            <a className="nav-link">Gallery</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/testimonials" activeClassName="active">
-                            <a className="nav-link">Testimonials</a>
-                          </Link>
-                        </li>
-                      </ul> */}
                     </li>
 
                     <li className="nav-item">
@@ -139,152 +108,15 @@ const Navbar = () => {
                         Services
                       </a>
                       </Link>
-                      {/* <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="#" activeClassName="active">
-                            <a className="nav-link">Artificial Intelligence</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="#" activeClassName="active">
-                            <a className="nav-link">Robotic Automation</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link
-                            href="#"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Data Science Services</a>
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link
-                            href="#"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Application Development</a>
-                          </Link>
-                        </li>
-                      </ul> */}
                     </li>
 
-                    {/* <li className="nav-item">
-                      <a href="#" className="nav-link">
-                        Projects <i className="ri-arrow-down-s-line"></i>
+                    <li className="nav-item">
+                    <Link href="/solutions" activeClassName="active"> 
+                      <a className="nav-link">
+                        Solutions
                       </a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="/projects/projects" activeClassName="active">
-                            <a className="nav-link">Projects</a>
-                          </Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link
-                            href="/projects/projects-details"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Projects Details</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li> */}
-
-                    {/* <li className="nav-item">
-                      <Link href="#" activeClassName="active">
-                        <a className="nav-link">
-                          Pages <i className="ri-arrow-down-s-line"></i>
-                        </a>
                       </Link>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <Link href="/pricing" activeClassName="active">
-                            <a className="nav-link">Pricing</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/team" activeClassName="active">
-                            <a className="nav-link">Team</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/faq" activeClassName="active">
-                            <a className="nav-link">FAQ</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <a href="#" className="nav-link">
-                            Career <i className="ri-arrow-right-s-line"></i>
-                          </a>
-                          <ul className="dropdown-menu">
-                            <li className="nav-item">
-                              <Link href="/career/career" activeClassName="active">
-                                <a className="nav-link">Career</a>
-                              </Link>
-                            </li>
-
-                            <li className="nav-item">
-                              <Link
-                                href="/career/career-details"
-                                activeClassName="active"
-                              >
-                                <a className="nav-link">Career Details</a>
-                              </Link>
-                            </li>
-                          </ul>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link
-                            href="/profile-authentication"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Profile Authentication</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link
-                            href="/membership-levels"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Membership Levels</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link
-                            href="/terms-of-service"
-                            activeClassName="active"
-                          >
-                            <a className="nav-link">Terms of Service</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/privacy-policy" activeClassName="active">
-                            <a className="nav-link">Privacy Policy</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/coming-soon" activeClassName="active">
-                            <a className="nav-link">Coming Soon</a>
-                          </Link>
-                        </li>
-
-                        <li className="nav-item">
-                          <Link href="/404" activeClassName="active">
-                            <a className="nav-link">404 Error Page</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li> */}
+                    </li>
                     
                     <li className="nav-item">
                     <Link href="/blog/blog" activeClassName="active"> 
@@ -292,7 +124,7 @@ const Navbar = () => {
                         Blogs
                       </a>
                       </Link>
-                      </li>
+                    </li>
                    
 
                     {/* <li className="nav-item">
