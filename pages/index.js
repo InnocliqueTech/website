@@ -18,7 +18,7 @@ export default function Home() {
   const [blogdata, setBlogData] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/getblogs')
+    fetch('http://localhost:3001/api/getblogs')
       .then(async response => {
         const fetchdata = await response.json()
         console.log(fetchdata.blogsData)
