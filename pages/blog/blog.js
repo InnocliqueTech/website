@@ -17,7 +17,7 @@ export default function Blog() {
 
       <div
         className="page-banner-area mt-94"
-        style={{ backgroundImage: `url(/images/page-banner/banner-bg-2.jpg` }}
+        style={{ backgroundImage: `url(/images/page-banner/banner-bg-4.jpg` }}
       >
         <div className="container">
           <div
@@ -26,9 +26,10 @@ export default function Blog() {
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-once="true"
+            style={{padding:"90px 0px"}}
           >
             <h2>Blog</h2>
-            <ul>
+            <ul style={{marginLeft:"6px"}}>
               <li>
                 <Link href="/">
                   <a>Home</a>

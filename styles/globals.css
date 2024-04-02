@@ -7568,3 +7568,58 @@ Buy Now Btn
   flex: 1; 
   max-width: 300px;
 }
+
+.ql-toolbar {
+  border-radius: 40px;
+}
+
+.section-title span {
+  margin-bottom: 0px;
+}
+
+.ql-snow .ql-color-picker, .ql-snow .ql-icon-picker {
+  width: 29px;
+}
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  margin-top: 0px;
+  top: 0px
+}
+.ql-toolbar.ql-snow {
+  border: none !important;
+  background: aliceblue;
+  margin-top: 15px;
+}
+
+/* .ql-editor p {
+  min-height: 200px;
+  border: 1px solid #1976d2;
+} */
+
+
+/* .ql-container.ql-snow{
+  border:1px solid #1976d2 !important;
+  margin-top: 10px !important;
+  min-height: 200px;
+} */
+
+
+
+/* Initial state */
+.ql-container.ql-snow {
+  border: 1px solid #9900ff !important; /* Set initial border color to red */
+  margin-top: 10px !important;
+  min-height: 200px;
+}
+
+/* Focused state */
+.ql-container.ql-snow:focus-within {
+  border: 2px solid #1976d2 !important; /* Change border color to #1976d2 when focused */
+}
+.ql-toolbar.ql-snow .ql-picker-label {
+  border: 0px !important;
+}
+
+.blog-image .article-image {
+  width: 261px;
+    height: 240px 
+}

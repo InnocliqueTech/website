@@ -9,7 +9,7 @@ export default function singleblog() {
     <>
       <Navbar />
 
-      <div className="page-banner-area mt-94" style={{ backgroundImage: `url(/images/page-banner/banner-bg-2.jpg` }}>
+      <div className="page-banner-area mt-94" style={{ backgroundImage: `url(/images/page-banner/banner-bg-4.jpg` }}>
         <div className="container">
           <div
             className="page-banner-content"
@@ -17,6 +17,7 @@ export default function singleblog() {
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-once="true"
+            style={{padding:"60px 0px"}}
           >
             <h2>Blog Details</h2>
             <ul>

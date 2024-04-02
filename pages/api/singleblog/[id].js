@@ -9,38 +9,32 @@ export const config = {
     },
 };
 
-export default async function handler(request, response) {
+export default async function handler (request, response) {
     try {
         await connectMongoDB();
 
-        const { query: { id }, method,} = request;
+        const {query: {id}, method} = request;
 
-        if (method === 'PUT') {
-            const { heading, description, image } = request.body;
-
-            if (!id || !heading || !description) {
+        if(method === 'GET') {
+            if(!id) {
                 return response.status(400).json({
-                    message: 'ID, heading, and description are required fields',
+                    message: 'ID is required',
                 });
             }
 
-            const updatedBlog = await Blogs.findByIdAndUpdate(id, {
-                heading,
-                description,
-                image,
-            }, { new: true });
+            const singleBlog = await Blogs.findById(id);
 
-            if (!updatedBlog) {
+            if (!singleBlog) {
                 return response.status(404).json({
                     message: 'Blog not found',
                 });
             }
 
             return response.status(200).json({
-                message: 'Blog updated successfully',
-                updatedBlog,
+                message: 'Blog found',
+                singleBlog,
             });
-        } else {
+        }else {
             return response.status(405).json({
                 message: 'Method Not Allowed',
             });

@@ -3,6 +3,25 @@ import Link from "@/utils/ActiveLink";
 
 const Navbar = () => {
   const [menu, setMenu] = React.useState(true);
+
+    // State to track user's login status
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    // a token stored in localStorage
+  const checkLoggedIn = () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  // Call the checkLoggedIn function when component mounts to determine initial login status
+  React.useEffect(() => {
+    checkLoggedIn();
+  }, []);
+
   const toggleNavbar = () => {
     setMenu(!menu);
   };
@@ -124,6 +143,18 @@ const Navbar = () => {
                         Blogs
                       </a>
                       </Link>
+                    </li>
+                    <li className="nav-item">
+                    {/* Conditionally display Add Blog link if user is logged in */}
+                    {isLoggedIn && (
+                      <li className="nav-item">
+                        <Link href="/blog/addBlog" activeClassName="active"> 
+                          <a className="nav-link">
+                            Add Blog
+                          </a>
+                        </Link>
+                      </li>
+                    )}
                     </li>
                    
 
