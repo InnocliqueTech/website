@@ -15,6 +15,7 @@ const Authentication = () => {
             {/* <div className="col-lg-6 col-md-12">
               <RegisterForm />
             </div> */}
+            
           </div>
         </div>
       </div>

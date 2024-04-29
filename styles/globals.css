@@ -7620,6 +7620,13 @@ Buy Now Btn
 }
 
 .blog-image .article-image {
-  width: 261px;
-    height: 240px 
+  width: 250px;
+    height: 250px 
+}
+
+.blog-image .article-image img {
+  width: 100%;
+    height: 100%;
+    max-width: inherit;
+    border-radius: 15px;
 }

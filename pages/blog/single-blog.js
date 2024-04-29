@@ -9,7 +9,7 @@ export default function SingleBlog() {
     <>
       <NavbarTwo />
 
-      <div className="page-banner-area mt-94" style={{ backgroundImage: `url(/images/page-banner/banner-bg-2.jpg` }}>
+      <div className="page-banner-area mt-94" style={{ backgroundImage: `url(/images/blog/blog-banner-bg-2.jpg` }}>
         <div className="container">
           <div
             className="page-banner-content"

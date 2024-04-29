@@ -9,26 +9,32 @@ export default function singleblog() {
     <>
       <Navbar />
 
-      <div className="page-banner-area mt-94" style={{ backgroundImage: `url(/images/page-banner/banner-bg-4.jpg` }}>
-        <div className="container">
-          <div
-            className="page-banner-content"
-            data-aos="fade-right"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-once="true"
-            style={{padding:"60px 0px"}}
-          >
-            <h2>Blog Details</h2>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>Blog Details</li>
-            </ul>
+      <div className="page-banner-area mt-94" >
+        <div className="container bancontainer">
+          <div className="content-left">
+            <div
+              className="page-banner-content"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-once="true"
+            >
+               <h2>Blog</h2>
+                <ul>
+                  <li>
+                    <Link href="/blog/blog">
+                      <a>Blogs list</a>
+                    </Link>
+                  </li>
+                  <li>Blog</li>
+                </ul>
+            </div>
           </div>
+          
+          <div className="banner-image col-md-8">
+            <img src="/images/blog-details/Ban-Blog.png" />
+          </div>
+          
         </div>
       </div>
 
