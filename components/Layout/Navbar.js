@@ -151,7 +151,7 @@ const Navbar = () => {
                       </a>
                       </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                     {isLoggedIn && (
                       <li className="nav-item">
                         <Link href="/blog/addBlog" activeClassName="active"> 
@@ -174,7 +174,7 @@ const Navbar = () => {
                         </Link>
                       </li>
                     )}
-                    </li>
+                    </li> */}
 
                     <li className="nav-item">
                       <Link href="/contact" activeClassName="active">
