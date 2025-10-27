@@ -72,7 +72,7 @@ const Navbar = () => {
               <nav className="navbar navbar-expand-md navbar-light">
                 <Link href="/">
                   <a className="navbar-brand">
-                    <img src="/images/logo.png" alt="Site logo" />
+                    <img src="/images/logo.png" alt="Site logo" style={{width:"300px"}}/>
                   </a>
                 </Link>
 

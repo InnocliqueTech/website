@@ -432,7 +432,10 @@ Main Slides Area CSS
   /* background: rgb(0,27,125);
   background: linear-gradient(185deg, rgba(0,27,125,1) 33%, rgba(11,15,50,1) 100%); */
   background: rgb(5,151,217);
-  background: linear-gradient(76deg, rgba(5,151,217,1) 0%, rgba(5,31,81,1) 84%);
+background: linear-gradient(256deg, rgba(5,151,217,1) 0%, rgba(5,31,81,1) 84%);
+
+  /* background: rgb(5,151,217);
+  background: linear-gradient(76deg, rgba(5,151,217,1) 0%, rgba(5,31,81,1) 84%); */
   padding-top: 150px;
   padding-bottom: 100px;
 }
