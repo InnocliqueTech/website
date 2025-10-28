@@ -259,6 +259,7 @@ const Navbar = () => {
                   <img
                     src="/images/blue_logo.png"
                     alt="image"
+                    style={{width:"250px"}}
                   />
                 </a>
               </Link>
