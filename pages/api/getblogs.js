@@ -5,7 +5,8 @@ export default async function handlerget(request, res) {
     try {
       await connectMongoDB();
       if (request.method === 'GET') {
-        const blogsData = await Blogs.find();
+        // const blogsData = await Blogs.find();
+        const blogsData = await Blogs.find({ deleted: { $ne: true } });
         return res.json({
           TotalBlogs: blogsData.length,
           blogsData,

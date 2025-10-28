@@ -10,36 +10,40 @@ export default function techinnodevdetails() {
   return (
     <>
       <Navbar />
-
-      <div
-        className="page-banner-area mt-94"
-        style={{ backgroundImage: `url(/images/solutions/solutions-ban.jpg` }}
-      >
-        <div className="container">
-          <div
-            className="page-banner-content"
-            data-aos="fade-right"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-once="true"
-          >
-            <h2>Solutions Details</h2>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>
-              <Link href="/solutions">
-                  <a>Solutions</a>
-                </Link>
-                </li>
-              <li>Tech Inno Dev</li>
-            </ul>
+      <div className="page-banner-area mt-94" >
+        <div className="container bancontainer">
+          <div className="content-left">
+            <div
+              className="page-banner-content"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-once="true"
+            >
+                <h2>Solutions Details</h2>
+                <ul>
+                  <li>
+                    <Link href="/">
+                      <a>Home</a>
+                    </Link>
+                  </li>
+                  <li>
+                  <Link href="/solutions">
+                      <a>Solutions</a>
+                    </Link>
+                    </li>
+                  <li>Tech Inno Dev</li>
+                </ul>
+            </div>
           </div>
+          
+          <div className="banner-image col-md-8">
+            <img src="/images/SolutionDetails/SolutionDetails.png" />
+          </div>
+          
         </div>
       </div>
+      
 
       
       <TechInnoDevContent/>

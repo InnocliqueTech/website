@@ -1,26 +1,35 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
 const blogSchema = new Schema({
    
-    date: {
-        type: String,
-        required: true,
-    },
     heading: {
         type: String,
         required: true,
     },
     description: {
         type: String,
-        required: true,
+        required: false,
     },
-    // image: {
-    //     type: String,
-    //     required: true,
-    // },
-    // timestamps: true
-
+    image: {
+        type:String,
+        required: false
+    },
+    deleted: {
+        type: Boolean,
+        default: false // Default value to false to indicate active documents
+    }
+    
+    // image: [{
+    //     type: String, // Assuming image URLs are stored as strings
+    //   }],
+},
+{
+    timestamps: true // Enable timestamps
 })
 
 const Blogs = mongoose.models.Blogs || mongoose.model("Blogs", blogSchema);
 export default Blogs;
+
+
+

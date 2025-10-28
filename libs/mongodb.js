@@ -1,15 +1,35 @@
+// import mongoose from "mongoose";
+
+// const connectMongoDB = async () => {
+//     try {
+//        await mongoose.connect(process.env.MONGODB_URI);
+//         console.log("Connected to MongoDB.")
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// export default connectMongoDB;
+
 import mongoose from "mongoose";
 
 const connectMongoDB = async () => {
     try {
-       await mongoose.connect(process.env.MONGODB_URI);
+        await mongoose.connect(process.env.MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            bufferCommands: false, // Disable buffering
+            serverSelectionTimeoutMS: 10000, // Increase timeout
+            socketTimeoutMS: 30000, // Increase timeout for individual operations
+        });
         console.log("Connected to MongoDB.")
     } catch (error) {
-        console.log(error)
+        console.error("Error connecting to MongoDB:", error);
     }
 }
 
 export default connectMongoDB;
+
 
 // import mongoose from "mongoose";
 

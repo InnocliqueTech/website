@@ -11,34 +11,37 @@ export default function dataanalyticsservice() {
   return (
     <>
       <Navbar />
-
-      <div
-        className="page-banner-area mt-94"
-        style={{ backgroundImage: `url(/images/page-banner/banner-bg-4.jpg` }}
-      >
-        <div className="container">
-          <div
-            className="page-banner-content"
-            data-aos="fade-right"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-once="true"
-          >
-            <h2>Services Details</h2>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>
-              <Link href="/services/services-2">
-                  <a>Services</a>
-                </Link>
+      <div className="page-banner-area mt-94" >
+        <div className="container bancontainer">
+          <div className="content-left">
+            <div
+              className="page-banner-content"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-once="true"
+            >
+                <h2>Services Details</h2>
+              <ul>
+                <li>
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
                 </li>
-              <li>Data Analytics</li>
-            </ul>
+                <li>
+                  <Link href="/services/services-2">
+                    <a>Services</a>
+                  </Link>
+                </li>
+                <li>Data Analytics</li>
+              </ul>
+            </div>
           </div>
+          
+          <div className="banner-image col-md-8">
+            <img src="/images/services-details/ServiceDetails-Ban.png" />
+          </div>
+          
         </div>
       </div>
 

@@ -10,7 +10,7 @@ const sblog = () => {
   useEffect(() => {
     console.log('ID:', id); 
     if (id) {
-      fetch(`http://localhost:3000/api/blog/${id}`)
+      fetch(`/api/blog/${id}`)
         .then(async response => {
           const fetchData = await response.json();
           console.log(fetchData)

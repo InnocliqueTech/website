@@ -16,6 +16,14 @@ const nextConfig = {
     locales: ["en", "ar"],
     defaultLocale: "en",
   },
+   // Increase the limit for request body size
+  //  serverRuntimeConfig: {
+  //   apiPayload: {
+  //     bodyParser: {
+  //       sizeLimit: '10mb',
+  //     },
+  //   },
+  // },
 }
 
 module.exports = nextConfig

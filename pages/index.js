@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Layout/Navbar";
 import HeroSlider from "@/components/HomePageDemo1/HeroSlider";
 import Partners from "@/components/Common/Partners";
@@ -11,53 +11,44 @@ import Testimonials from "@/components/Common/Testimonials";
 import PricingTable from "@/components/Pricing/PricingTable";
 import Article from "@/components/Common/Article";
 import Footer from "@/components/Layout/Footer";
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+import axios from 'axios';
 
 export default function Home() {
-  const [blogdata, setBlogData] = useState([])
+  const [blogdata, setBlogData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/getblogs')
-      .then(async response => {
-        const fetchdata = await response.json()
-        console.log(fetchdata.blogsData)
-        setBlogData(fetchdata.blogsData)
-        console.log(blogdata, "blogdatawithstate")
+    axios.get('/api/getblogs')
+      .then(response => {
+        const fetchData = response.data.blogsData.filter(blog => !blog.deleted);
+        setBlogData(fetchData);
       })
-  }, [])
+      .catch(error => {
+        console.error('Error fetching blog data:', error);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log(blogdata);
+  }, [blogdata]);
 
   return (
     <>
       <Navbar />
-
       <HeroSlider />
-
       <Partners />
-
       <WhoWeAre />
-
       <ServiceSlider />
-
       <WhyChooseUs />
-
       <div className="">
         <IntroVideo />
       </div>
-
       <ProjectSlider />
-
-      {/* <Testimonials /> */}
-
       <div className="m-2 bor-radius-15">
-        {/* <PricingTable className="rounded-4" /> */}
+        <Article blogdata={blogdata}/>
       </div>
-
-      <Article blogdata={blogdata}/>
-
       <div className="m-2 bor-radius-15">
         <Footer className="rounded-4" />
       </div>
     </>
-  )
+  );
 }

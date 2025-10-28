@@ -10,28 +10,33 @@ export default function Services2() {
     <>
       <Navbar />
 
-      <div
-        className="page-banner-area mt-94"
-        style={{ backgroundImage: `url(/images/page-banner/banner-bg-3.jpg` }}
-      >
-        <div className="container">
-          <div
-            className="page-banner-content"
-            data-aos="fade-right"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-once="true"
-          >
-            <h2>Services</h2>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              </li>
-              <li>Services</li>
-            </ul>
+    
+      <div className="page-banner-area mt-94" >
+        <div className="container bancontainer">
+          <div className="content-left">
+            <div
+              className="page-banner-content"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-once="true"
+            >
+              <h2>Services</h2>
+              <ul>
+                <li>
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                </li>
+                <li>Services</li>
+              </ul>
+            </div>
           </div>
+          
+          <div className="banner-image col-md-8">
+            <img src="/images/services/ServicesBan.png" />
+            </div>
+          
         </div>
       </div>
   

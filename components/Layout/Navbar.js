@@ -1,8 +1,34 @@
 import React, { useState } from "react";
 import Link from "@/utils/ActiveLink";
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const [menu, setMenu] = React.useState(true);
+
+    // State to track user's login status
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const router = useRouter();
+
+    // a token stored in localStorage
+  const checkLoggedIn = () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    router.push("/profile-authentication");
+  };
+  // Call the checkLoggedIn function when component mounts to determine initial login status
+  React.useEffect(() => {
+    checkLoggedIn();
+  }, []);
+
   const toggleNavbar = () => {
     setMenu(!menu);
   };
@@ -46,7 +72,7 @@ const Navbar = () => {
               <nav className="navbar navbar-expand-md navbar-light">
                 <Link href="/">
                   <a className="navbar-brand">
-                    <img src="/images/logo.png" alt="Site logo" />
+                    <img src="/images/logo.png" alt="Site logo" style={{width:"300px"}}/>
                   </a>
                 </Link>
 
@@ -125,12 +151,29 @@ const Navbar = () => {
                       </a>
                       </Link>
                     </li>
-                   
-
                     {/* <li className="nav-item">
-                      <Link href="/pricing" activeClassName="active">
-                        <a className="nav-link">Pricing</a>
-                      </Link>
+                    {isLoggedIn && (
+                      <li className="nav-item">
+                        <Link href="/blog/addBlog" activeClassName="active"> 
+                          <a className="nav-link">
+                            Add Blog
+                          </a>
+                        </Link>
+                      </li>
+                      
+                    )}
+                    </li>
+                    <li className="nav-item">
+             
+                    {isLoggedIn && (
+                      <li className="nav-item">
+                        <Link activeClassName="active" href="profile-authentication" > 
+                          <a className="nav-link" onClick={handleLogout}>
+                           Log out
+                          </a>
+                        </Link>
+                      </li>
+                    )}
                     </li> */}
 
                     <li className="nav-item">

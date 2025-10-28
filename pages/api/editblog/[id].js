@@ -1,47 +1,56 @@
 import connectMongoDB from "libs/mongodb";
 import Blogs from "models/blog";
 
-export default async function editlog(req, res) {
+export const config = {
+    api: {
+        bodyParser: {
+            sizeLimit: '10MB', // Adjust the limit as needed
+        },
+    },
+};
+
+export default async function handler(request, response) {
     try {
         await connectMongoDB();
-        if(req.method === 'PUT') {
-            const {id} = req.query
-           const updatedData = req.body;
-           console.log(id, "putid")
 
-           if(!id) {
-            return res.json({
-                message: "Blog ID is required for update",
-                status: 400
-            })
-           }
+        const { query: { id }, method,} = request;
 
-           const updatedBlog = await Blogs.findByIdAndUpdate(id, updatedData, {new: true})
-           if(!updatedBlog) {
-            return res.json({
-                message: "Blog not found",
-                status: 404
-            })
-           }
+        if (method === 'PUT') {
+            const { heading, description, image } = request.body;
 
-           return res.json({
-            message: "Blog updated successfully",
-            updatedBlog,
-            status:"200"
-           })
-        }else{
-            return res.json({
-                message: "Method not allowed",
-                status: 405
-            })
+            if (!id || !heading || !description) {
+                return response.status(400).json({
+                    message: 'ID, heading, and description are required fields',
+                });
+            }
+
+            const updatedBlog = await Blogs.findByIdAndUpdate(id, {
+                heading,
+                description,
+                image,
+            }, { new: true });
+
+            if (!updatedBlog) {
+                return response.status(404).json({
+                    message: 'Blog not found',
+                });
+            }
+
+            return response.status(200).json({
+                message: 'Blog updated successfully',
+                updatedBlog,
+            });
+        } else {
+            return response.status(405).json({
+                message: 'Method Not Allowed',
+            });
         }
     } catch (error) {
-        console.error("Error in API route:", error)
-        return res.json({
-            message: "Internal server error",
-            status: 500,
-            error: error.message
-        })
+        console.error('Error in API route:', error);
+
+        return response.status(500).json({
+            message: 'Internal Server Error',
+            error: error.message,
+        });
     }
 }
-

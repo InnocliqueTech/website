@@ -1,13 +1,31 @@
 import connectMongoDB from "libs/mongodb";
 import Blogs from "models/blog";
+// import cloudinary from 'cloudinary-react';
+
+
+// cloudinary.config({
+//   cloud_name: 'dgi4evce0',
+//   api_key: '556683438218227',
+//   api_secret: 'EDqDSLVSbcqScEyFKGXOiRjiJms',
+//  });
+
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10MB', // Adjust the limit as needed
+    },
+  },
+};
+
 
 export default async function handlerpost(request, res) {
   try {
     await connectMongoDB();
 
     if (request.method === 'POST') {
-      const { heading, description, date } = await request.body;
-
+      console.log("REQ",request.body, request.body.heading)
+      const { heading, description, data, image } = request.body;
+      console.log("HEADING", heading, description)
       if (!heading || !description ) {
         return res.json({
           message: 'Heading and description',
@@ -15,7 +33,9 @@ export default async function handlerpost(request, res) {
         });
       }
 
-      const newBlog = await Blogs.create({ heading, description, date });
+    
+
+      const newBlog = await Blogs.create({ description, heading, image });
 
       return res.json({
         message: 'Blog created',
@@ -38,6 +58,7 @@ export default async function handlerpost(request, res) {
     });
   }
 }
+
 
 
 
